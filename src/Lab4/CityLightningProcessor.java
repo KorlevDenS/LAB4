@@ -5,8 +5,8 @@ public class CityLightningProcessor {
     private int currentHour;
     private DayPeriods period;
 
-    public CityLightningProcessor(int currentHour) throws IncorrectDataForObjectException{
-        if ((currentHour < 0)||(currentHour > 23))
+    public CityLightningProcessor(int currentHour) throws IncorrectDataForObjectException {
+        if ((currentHour < 0) || (currentHour > 23))
             throw new IncorrectDataForObjectException("There is no hour with this number.");
         this.currentHour = currentHour;
         this.determinePeriod();
@@ -55,12 +55,12 @@ public class CityLightningProcessor {
         }
     }
 
-    public void setCurrentHour(int currentHour) throws IncorrectDataForObjectException{
-        if ((currentHour < 0)||(currentHour > 23))
+    public void setCurrentHour(int currentHour) throws IncorrectDataForObjectException {
+        if ((currentHour < 0) || (currentHour > 23))
             throw new IncorrectDataForObjectException("There is no hour with this number.");
         this.currentHour = currentHour;
         this.determinePeriod();
         System.out.println("Текущее время: " + this.currentHour + " ч. "
-        + "Наступившее время суток: " + this.period.getPeriod());
+                + "Наступившее время суток: " + this.period.getPeriod());
     }
 }

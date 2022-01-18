@@ -19,11 +19,11 @@ public class MainCharacterFriend extends Human implements Likeable {
     public String likeDoingSth(EntertainmentTypes entertainment) {
         Described favoriteActivity = new Described() {
 
-            private String determineActivity(EntertainmentTypes e){
+            private String determineActivity(EntertainmentTypes e) {
                 return e.getDescription();
             }
 
-            public String getDescription(){
+            public String getDescription() {
                 return determineActivity(entertainment);
             }
         };

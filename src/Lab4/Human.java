@@ -9,7 +9,7 @@ public abstract class Human {
     public ArrayList<Knowledge> knowledge = new ArrayList<>();
 
     public Human(String Name, Double Height) throws IncorrectDataForObjectException {
-        if ((Height < 67)||(Height > 272))
+        if ((Height < 67) || (Height > 272))
             throw new IncorrectDataForObjectException("People with such height cannot exist.");
         this.Name = Name;
         this.Height = Height;

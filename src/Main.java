@@ -39,7 +39,7 @@ public class Main {
             miniSun1.turnedOn = true;
         }
         // работа со статическим внутренним классом
-        Reservoir.Pair p = Reservoir.squareValue(5,2000, 4);
+        Reservoir.Pair p = Reservoir.squareValue(5, 2000, 4);
         System.out.println("Площадь такого водоёма = " + p.getFirst()
                 + " метров квадратных, а объем = " + p.getSecond() + " метров кубических.");
         // работа с внутренними и локальными и анонимными классами

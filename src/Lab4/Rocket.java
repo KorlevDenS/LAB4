@@ -7,8 +7,8 @@ public class Rocket {
     public int currentSpeed;
     public int currentFuelReserve;
 
-    public Rocket(int maxSpeed, int maxFuelReserve, Double maxPassengerHeight) throws IncorrectDataForObjectException{
-        if ((maxSpeed < 20000)||( maxFuelReserve < 1000)||(maxPassengerHeight < 67))
+    public Rocket(int maxSpeed, int maxFuelReserve, Double maxPassengerHeight) throws IncorrectDataForObjectException {
+        if ((maxSpeed < 20000) || (maxFuelReserve < 1000) || (maxPassengerHeight < 67))
             throw new IncorrectDataForObjectException("Rocket with such params cannot exist.");
         this.maxSpeed = maxSpeed;
         this.maxFuelReserve = maxFuelReserve;

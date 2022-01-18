@@ -8,7 +8,7 @@ public class Reservoir {
     private final int length;
 
     public Reservoir(String name, int depth, int width, int length) throws IncorrectDataForObjectException {
-        if ((depth < 1)||(depth > 10000)||(width < 2)||(length < 0))
+        if ((depth < 1) || (depth > 10000) || (width < 2) || (length < 0))
             throw new IncorrectDataForObjectException("Reservoirs with such params cannot exist.");
         this.name = name;
         this.depth = depth;
@@ -17,7 +17,7 @@ public class Reservoir {
     }
 
     public Reservoir(int depth, int width, int length) throws IncorrectDataForObjectException {
-        if ((depth < 1)||(depth > 10000)||(width < 2)||(length < 0))
+        if ((depth < 1) || (depth > 10000) || (width < 2) || (length < 0))
             throw new IncorrectDataForObjectException("Reservoirs with such params cannot exist.");
         this.name = "unknown";
         this.depth = depth;
@@ -66,7 +66,7 @@ public class Reservoir {
 
     }
 
-    public class Bridge implements Illuminated{
+    public class Bridge implements Illuminated {
 
         private final Double height;
         private final String material;
@@ -79,10 +79,10 @@ public class Reservoir {
             this.width = Reservoir.this.width;
         }
 
-        public String addFlashlights(int height) throws IncorrectDataForObjectException{
-            if ((height < 1)||(height > 20))
+        public String addFlashlights(int height) throws IncorrectDataForObjectException {
+            if ((height < 1) || (height > 20))
                 throw new IncorrectDataForObjectException("Flashlights with such height cannot exist.");
-            this.bridgeFlashlights = new FlashLight[2 * (width / 10) ];
+            this.bridgeFlashlights = new FlashLight[2 * (width / 10)];
             for (int i = 0; i < 2 * (width / 10); i++) {
                 bridgeFlashlights[i] = new FlashLight(height);
             }
@@ -91,7 +91,7 @@ public class Reservoir {
 
         public String illuminate(int brightness) {
             if (bridgeFlashlights == null)
-            System.out.println(this.addFlashlights(4));
+                System.out.println(this.addFlashlights(4));
             for (FlashLight flashlight : bridgeFlashlights) {
                 try {
                     flashlight.turnOn();
@@ -102,18 +102,18 @@ public class Reservoir {
                 }
             }
 
-                Illuminated reflectedLight = new Illuminated() {
+            Illuminated reflectedLight = new Illuminated() {
 
-                    private String reflect() {
-                        return "Свет фонарей отразился в воде с яркостью " + brightness / 2 + ".";
-                    }
+                private String reflect() {
+                    return "Свет фонарей отразился в воде с яркостью " + brightness / 2 + ".";
+                }
 
-                    public String illuminate(int brightness) {
-                        if ((brightness / 2 <= 50)&&(brightness / 2>35))
-                            return reflect() + " Под мостом стало светло.";
-                        else return reflect() + " По мостом стало не совсем темно.";
-                    }
-                };
+                public String illuminate(int brightness) {
+                    if ((brightness / 2 <= 50) && (brightness / 2 > 35))
+                        return reflect() + " Под мостом стало светло.";
+                    else return reflect() + " По мостом стало не совсем темно.";
+                }
+            };
             return "На мосту зажглись фоанри и осветили его. " + reflectedLight.illuminate(brightness);
         }
 

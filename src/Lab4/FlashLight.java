@@ -7,8 +7,8 @@ public class FlashLight {
     private boolean equippedWithLamp;
     private int brightness;
 
-    public FlashLight(double height) throws IncorrectDataForObjectException{
-        if ((height < 1)||(height > 20))
+    public FlashLight(double height) throws IncorrectDataForObjectException {
+        if ((height < 1) || (height > 20))
             throw new IncorrectDataForObjectException("Flashlights with such height cannot exist.");
         this.height = height;
         this.equippedWithLamp = false;
@@ -25,7 +25,7 @@ public class FlashLight {
         turnedOn = false;
     }
 
-    public void installTheLamp(int brightness) throws IncorrectDataForObjectException{
+    public void installTheLamp(int brightness) throws IncorrectDataForObjectException {
         class Lamp {
 
             private final int brightness;
@@ -40,7 +40,7 @@ public class FlashLight {
                 return this.brightness;
             }
         }
-        if ((brightness < 1)||(brightness > 100))
+        if ((brightness < 1) || (brightness > 100))
             throw new IncorrectDataForObjectException("Lamps with such brightness cannot exist.");
         Lamp lamp = new Lamp(brightness);
     }
