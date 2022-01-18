@@ -14,11 +14,12 @@ public class CityLightningProcessor {
 
     public void manageAllTheLightning(Reservoir.Embankment e, Reservoir.Bridge b) {
         switch (period) {
-            case NIGHT -> {
+            case NIGHT:
                 System.out.println(e.illuminate(100));
                 System.out.println(b.illuminate(100));
-            }
-            case MORNING, AFTERNOON -> {
+                break;
+            case MORNING:
+            case AFTERNOON:
                 try {
                     System.out.println(e.turnOffLightning());
                 } catch (EquipmentNotFoundException exception) {
@@ -31,11 +32,11 @@ public class CityLightningProcessor {
                     b.illuminate(50);
                     System.out.println("Освещеие моста установлено, проверено и выключено");
                 }
-            }
-            case EVENING -> {
+                break;
+            case EVENING:
                 System.out.println(e.illuminate(70));
                 System.out.println(b.illuminate(70));
-            }
+                break;
         }
     }
 
