@@ -42,7 +42,7 @@ public class FlashLight {
         }
         if ((brightness < 1)||(brightness > 100))
             throw new IncorrectDataForObjectException("Lamps with such brightness cannot exist.");
-        var lamp = new Lamp(brightness);
+        Lamp lamp = new Lamp(brightness);
     }
 
     public double getHeight() {
