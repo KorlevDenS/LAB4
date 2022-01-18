@@ -53,7 +53,7 @@ public class Main {
             System.out.println("Освещение моста установлено, проверено и выключено");
         }
         System.out.println(bridge1.illuminate(70));
-        var lightManager = new CityLightningProcessor(18);
+        CityLightningProcessor lightManager = new CityLightningProcessor(18);
         lightManager.setCurrentHour(18);
         lightManager.manageAllTheLightning(riverBank, bridge1);
     }

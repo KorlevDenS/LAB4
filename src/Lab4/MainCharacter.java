@@ -41,7 +41,7 @@ public class MainCharacter extends Human implements Thinkable, Reactive, Riddles
             System.out.println(Name + " теперь думает в 2 раза быстрее");
         }
 
-        var entertainment = new Described() {
+        Described entertainment = new Described() {
 
             private String comeUpWithEntertainment() {
                 int index = (int) (Math.random() * EntertainmentTypes.values().length);

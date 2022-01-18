@@ -102,7 +102,7 @@ public class Reservoir {
                 }
             }
 
-                var reflectedLight = new Illuminated() {
+                Illuminated reflectedLight = new Illuminated() {
 
                     private String reflect() {
                         return "Свет фонарей отразился в воде с яркостью " + brightness / 2 + ".";
